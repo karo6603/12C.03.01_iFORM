@@ -1,0 +1,100 @@
+:root {
+  --purple: #73008f;
+  --pink: #ff025c;
+  --grey: #dbdbdb;
+  --darkgrey: #afb1b2;
+}
+
+@font-face {
+  font-family: "font";
+  src: url(fonts/GT-Walsheim-Regular.woff);
+}
+
+/* HEADER */
+
+.menu div {
+  width: 35px;
+  height: 5px;
+  background-color: var(--purple);
+  margin: 6px 0;
+}
+
+nav {
+  margin: 20px;
+  display: grid;
+  grid: auto / 1fr auto 1fr;
+  align-items: center;
+  padding: 0 0 20px;
+  border-bottom: 2px solid var(--grey);
+}
+
+nav img {
+  justify-self: center;
+  grid-column: 2;
+  width: 150px;
+}
+
+header span {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 20%;
+}
+
+.header_info {
+  font-family: font;
+  color: var(--purple);
+  font-size: 12px;
+}
+
+span img {
+  width: 12px;
+}
+
+/* LANDINGPAGE MAIN */
+.title h1 {
+  font-family: font;
+  font-size: 24px;
+  margin: 20px 0 0;
+}
+
+.title h2 {
+  font-family: font;
+  color: var(--pink);
+  font-size: 24px;
+  text-align: right;
+  margin: 20px 0 0;
+}
+
+.title p {
+  font-family: font;
+  font-size: 13px;
+  text-align: right;
+  margin: 10px 0;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 20px 0;
+}
+
+.slideshow img {
+  width: 100%;
+}
+
+.slideshow {
+  margin: 20px;
+}
+
+.ordernow {
+  background-color: var(--purple);
+  border: none;
+  color: white;
+  font-family: font;
+  font-size: 24px;
+  width: 90%;
+  height: 50px;
+  margin: 5vw;
+}
