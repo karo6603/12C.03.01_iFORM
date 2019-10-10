@@ -1,3 +1,7 @@
+/* *,
+html {
+  overflow-x: hidden;
+} */
 :root {
   --purple: #73008f;
   --pink: #ff025c;
@@ -129,4 +133,45 @@ a {
   color: var(--purple);
   font-family: font;
   margin: 20px;
+}
+
+/* MEDIAQUERIES */
+
+@media only screen and (min-width: 900px) {
+  .bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .ratings {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .stars {
+    margin: 0;
+  }
+
+  .stars p {
+    margin: 20px;
+  }
+
+  button.ordernow {
+    margin: 20px auto;
+    width: 60%;
+  }
+
+  .title h1 {
+    font-size: 30px;
+  }
+  .title h2 {
+    font-size: 30px;
+  }
 }
