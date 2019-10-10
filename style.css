@@ -14,6 +14,15 @@ html {
   src: url(fonts/GT-Walsheim-Regular.woff);
 }
 
+/* FIX OVERFLOW */
+body.popup_is_shown {
+  overflow: hidden;
+}
+
+body.popup_is_shown #popup {
+  display: block;
+}
+
 /* HEADER */
 
 .menu div {
@@ -174,4 +183,191 @@ a {
   .title h2 {
     font-size: 30px;
   }
+  cursor: pointer;
+}
+
+/*POPUP*/
+
+#popup {
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  position: fixed;
+  background-color: white;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: font;
+  overflow: auto;
+}
+
+/*POPUP step 1*/
+#popup .popup_header {
+  width: 100%;
+  background-color: #dbdbdb;
+  margin: 0;
+  padding: 20px;
+  height: 80px;
+}
+
+#popup .popup_pick_size {
+  font-size: 20px;
+}
+
+#popup .popup_sizes {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+#popup .popup_sizes .size {
+  display: flex;
+  flex-basis: calc(50% - 20px);
+  justify-content: center;
+  flex-direction: column;
+  height: 60px;
+  border: 2px solid #afb1b2;
+  margin: 5px;
+}
+
+#popup .popup_sizes .size.size_is_selected {
+  border-color: #73008f;
+}
+
+#popup img {
+  /* padding: 65px; */
+  margin: 20px auto;
+}
+
+#popup .popup_sizes .size.selected {
+  border: 2px solid var(--purple);
+}
+
+#poup .popup_sizes .size > div {
+  justify-content: center;
+  flex-direction: row;
+}
+
+#popup .popup_wrapper {
+  text-align: center;
+}
+
+#popup button.popup_close,
+#popup button.popup_go_back {
+  position: absolute;
+  top: 35px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  height: 30px;
+  width: 30px;
+}
+
+#popup button.popup_close img {
+  padding: 0 20px;
+}
+
+#popup button.popup_close {
+  right: 45px;
+}
+
+#popup button.popup_go_back {
+  left: 45px;
+}
+
+#popup button.popup_close svg,
+#popup button.popup_go_back svg {
+  display: block;
+}
+
+#popup button.popup_go_further {
+  background-color: var(--purple);
+  border: none;
+  color: white;
+  font-family: font;
+  font-size: 24px;
+  width: 90%;
+  height: 50px;
+  margin: 5vw;
+}
+
+/*POPUP step 2*/
+
+#popupsteptwo.is-shown {
+  display: block;
+}
+
+/*SE BESPARELSE*/
+
+.magazine .show_more {
+  color: #73008f;
+  text-decoration: underline;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: none;
+  z-index: 11;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+
+.content {
+  display: none;
+  overflow: hidden;
+  border: 2px solid #73008f;
+}
+
+.content table {
+  margin: 0 auto;
+}
+
+.content table td.description {
+  text-align: left;
+}
+
+.content table td.value {
+  text-align: right;
+}
+
+.show_more_info {
+  display: block;
+}
+
+.popup_magazines {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 15px;
+}
+
+.magazine {
+  border: 2px solid #dbdbdb;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.magazine h2 {
+  color: var(--pink);
+}
+
+.magazine h1 {
+  margin: 50px 0 20px;
+}
+
+.magazine h3 {
+  font-size: 25px;
+  margin: -25px auto 0px;
+  background-color: white;
+  width: 40%;
+  color: var(--purple);
+}
+
+table {
+  height: 100%;
+}
+
+.chosen {
+  border: 2px solid var(--purple);
 }
