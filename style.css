@@ -303,6 +303,9 @@ table {
 
 }
 
+
+
+
 .steps {
   background-color: #dbdbdb; 
   display: flex; 
@@ -313,3 +316,56 @@ table {
   justify-content: space-around;  
   margin: 0;  
 }
+
+.basket_step {
+  color: #ff025c; 
+}
+
+#header_yourorder {
+  text-align: center; 
+}
+
+.yourorder {
+  display: flex; 
+  justify-content: center; 
+  border: 2px solid #73008f; 
+  padding: 20px; 
+}
+
+.yourorder img {
+  width: 50%; 
+}
+
+.go_to_delivery {
+  background-color: var(--purple);
+  border: none;
+  color: white;
+  font-family: font;
+  font-size: 24px;
+  width: 90%;
+  height: 50px;
+  margin: 5vw;
+} 
+
+.basket_value {
+font-family: font; 
+width: 100%; 
+ 
+
+}
+
+.basket_value table {
+  margin: 0 auto;
+ 
+}
+
+.basket_value table td.description  {
+  text-align: left;
+  
+}
+
+.basket_value table td.value {
+  text-align: right;
+  
+} 
+
