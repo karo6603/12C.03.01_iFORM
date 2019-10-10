@@ -311,15 +311,17 @@ table {
   font-family: font;
   width: 100vw;
   justify-content: space-around;  
-  margin: 0;  
+  margin: -10px; 
+  padding: 15px;  
 }
 
-.basket_step {
+.basket_step1 {
   color: #ff025c; 
 }
 
 #header_yourorder {
   text-align: center; 
+  font-family: font; 
 }
 
 .yourorder {
@@ -333,7 +335,7 @@ table {
   width: 50%; 
 }
 
-.go_to_delivery {
+.go_to_nextstep {
   background-color: var(--purple);
   border: none;
   color: white;
@@ -345,14 +347,14 @@ table {
 } 
 
 .basket_value {
-font-family: font; 
-width: 100%; 
+font-family: font;   
  
 
 }
 
 .basket_value table {
   margin: 0 auto;
+  width: 90%; 
  
 }
 
@@ -398,4 +400,167 @@ width: 100%;
 font-family: font; 
 color: #afb1b2; 
 margin-left: 10px; 
+}
+
+/* DELIVERY */
+
+.shipping_step2 {
+  color: #ff025c; 
+}
+
+/* form {
+  font-family: font; 
+  width: 90%; 
+  display: flex;
+  flex-direction: column; 
+  margin: 10px; 
+  
+   
+}
+
+input {
+  padding: 15px; 
+} */
+
+
+/* FORM https://codepen.io/mdchad/pen/qqmJex  */
+
+body {
+  text-align: center; 
+  font-family: font; 
+}
+
+.main{
+  position:relative;
+  margin: 100px;
+}
+
+.hello{
+  /* position: absolute; */
+  left: 25%;
+  top: 10px;
+  font-size: 18px;
+  font-weight: 200;
+  color: #afb1b2; 
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+input[type=text]:focus~.hello {
+  display:block;
+  color: #73008f; 
+  top: -20px;
+  font-size: 14px;
+}
+
+input[type=text]:focus~.enter {
+  background-color: #73008f; 
+  position: absolute;
+  content: ' ';
+  height: 1px;
+  right: 45%;
+  top: 42px;
+  transform: scaleX(5) */
+
+}
+
+.enter{
+  transition: all ease 0.5s;
+  width: 10.1%;
+  transform: scaleX(1)
+
+}
+
+textarea, input { 
+  outline: none;
+  border: 2px solid #cecece;
+  height: 40px;
+  width: 50%; */
+} 
+
+input:focus{
+  content
+}
+
+/* PAY */
+
+.payment_step3 {
+  color: #ff025c; 
+}
+
+label  {
+border: 1px solid #afb1b2; 
+padding: 20px;  
+} 
+
+
+.radio_checker {
+  width: 90%; 
+  height: 90%; 
+  margin-top: 30px; 
+  padding: 20px; 
+ 
+}
+
+.radio_checker img {
+width: 20%;  
+}
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative; 
+  border: 2px sold black; 
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #73008f; 
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
 }
