@@ -14,6 +14,14 @@ html {
   src: url(fonts/GT-Walsheim-Regular.woff);
 }
 
+a {
+  cursor: pointer;
+}
+
+p {
+  font-family: font;
+}
+
 /* FIX OVERFLOW */
 body.popup_is_shown {
   overflow: hidden;
@@ -235,12 +243,7 @@ a {
 }
 
 #popup img {
-  /* padding: 65px; */
   margin: 20px auto;
-}
-
-#popup .popup_sizes .size.selected {
-  border: 2px solid var(--purple);
 }
 
 #poup .popup_sizes .size > div {
@@ -300,7 +303,7 @@ a {
 /*SE BESPARELSE*/
 
 .magazine .show_more {
-  color: #73008f;
+  color: var(--purple);
   text-decoration: underline;
   cursor: pointer;
   border: none;
@@ -315,7 +318,7 @@ a {
 .content {
   display: none;
   overflow: hidden;
-  border: 2px solid #73008f;
+  border: 2px solid var(--purple);
 }
 
 .content table {
@@ -342,7 +345,7 @@ a {
 }
 
 .magazine {
-  border: 2px solid #dbdbdb;
+  border: 2px solid var(--grey);
   padding: 10px;
   margin-bottom: 20px;
 }
@@ -369,4 +372,250 @@ table {
 
 .chosen {
   border: 2px solid var(--purple);
+}
+table {
+  height: 100%;
+}
+
+/*BASKET*/
+
+.first_step {
+  font-family: font;
+}
+
+.steps {
+  background-color: var(--grey);
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  font-family: font;
+  width: 100vw;
+  justify-content: space-around;
+  margin: -10px;
+  padding: 15px;
+  overflow-x: hidden;
+}
+
+.basket_step1 {
+  color: var(--pink);
+}
+
+#header_yourorder {
+  text-align: center;
+  font-family: font;
+}
+
+.yourorder {
+  display: flex;
+  justify-content: center;
+  border: 2px solid var(--purple);
+  padding: 20px;
+}
+
+.yourorder img {
+  width: 50%;
+}
+
+.go_to_nextstep {
+  background-color: var(--purple);
+  border: none;
+  color: white;
+  font-family: font;
+  font-size: 24px;
+  width: 90%;
+  height: 50px;
+  margin: 5vw;
+}
+
+.basket_value {
+  font-family: font;
+}
+
+.basket_value table {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.basket_value table td.description {
+  text-align: left;
+}
+
+.basket_value table td.value {
+  text-align: right;
+}
+
+.basket_value td {
+  border-bottom: 1px solid #ddd;
+}
+
+.value h2 {
+  color: var(--pink);
+}
+
+.go_back_checkout {
+  color: var(--darkgrey);
+  text-decoration: underline;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  width: 90%;
+  height: 10px;
+  margin: 5vw;
+  background: none;
+}
+
+.subscription_info img {
+  width: 90%;
+}
+
+.subscription_info p {
+  font-family: font;
+  padding: 20px;
+  color: var(--darkgrey);
+}
+
+.subscription_info h3 {
+  font-family: font;
+  color: var(--darkgrey);
+  margin-left: 10px;
+}
+
+/* DELIVERY */
+
+.shipping_step2 {
+  color: var(--pink);
+}
+
+.form {
+  overflow-x: hidden;
+}
+
+.form input {
+  padding: 10px 0;
+  margin: 10px auto;
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  border: 1px solid var(--darkgrey);
+  border-radius: 3px;
+}
+
+.form form div {
+  position: relative;
+}
+
+.form form div label {
+  position: absolute;
+  top: 25px;
+  left: 10px;
+  pointer-events: none;
+  transition: 0.5s;
+  background-color: white;
+  font-family: font;
+  color: var(--darkgrey);
+  z-index: 2;
+}
+
+.form input:focus ~ label,
+.form input:valid ~ label {
+  top: -2px;
+  color: var(--purple);
+}
+
+.horizontal {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.horizontal input {
+  width: 100%;
+}
+
+/* PAY */
+
+.payment_step3 {
+  color: var(--pink);
+}
+
+.radio_checker label {
+  border: 1px solid var(--darkgrey);
+  padding: 20px;
+}
+
+.radio_checker {
+  width: 90%;
+  height: 90%;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.radio_checker img {
+  width: 20%;
+}
+
+.container {
+  display: block;
+  position: relative;
+  border: 2px sold black;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 47px;
+  left: 20px;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: rgb(127, 241, 152);
+}
+
+.checkmark:after {
+  content: "\2713";
+  position: absolute;
+  left: 5px;
+  top: -2px;
+  display: none;
+  color: white;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox_checker .container {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+.checkbox_checker p {
+  margin: 45px auto 10px;
+  width: 70%;
+}
+
+.checkbox_checker a {
+  margin: 0 auto 20px;
+  width: 70%;
 }
