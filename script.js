@@ -82,13 +82,28 @@ function openStepTwo() {
                     </div>
                     <button type="button" class="show_more">Se besparelse</button>
                     <div class="content">
-                    <tr>
-                    <td>4 nr. af iFORM (normalpris pr. stk. 77,50 kr.) 310 kr. </td>
-                    <td>ActiveFit fiberjakke 600 kr.</td>
-                    <td>Værdi 930 kr. </td>
-                    <td>Rabat -761 kr. </td>
-                    <td>Din specialpris 149 kr. </td>
-                </tr>
+                    <table>
+                            <tr>
+                                <td class="description">4 nr. af iFORM (normalpris pr. stk. 77,50 kr.)</td>
+                                <td class="value">310 kr.</td>
+                            </tr>
+                            <tr>
+                                <td class="description">ActiveFit fiberjakke</td>
+                                <td class="value">600 kr.</td>
+                            </tr>
+                            <tr>
+                                <td class="description">Værdi</td>
+                                <td class="value">910 kr.</td>
+                            </tr>
+                            <tr>
+                                <td class="description">Rabat</td>
+                                <td class="value">-761 kr.</td>
+                            </tr>
+                            <tr>
+                                <td class="description">Din specialpris</td>
+                                <td class="value">149 kr.</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
                 <div class="magazine">
@@ -104,7 +119,7 @@ function openStepTwo() {
                                 <td class="value">465 kr.</td>
                             </tr>
                             <tr>
-                                <td class="description">ActiveFit fiberjakke</t>
+                                <td class="description">ActiveFit fiberjakke</td>
                                 <td class="value">600 kr.</td>
                             </tr>
                             <tr>
@@ -113,7 +128,7 @@ function openStepTwo() {
                             </tr>
                             <tr>
                                 <td class="description">Rabat</td>
-                                <td class="value"-866 kr.</td>
+                                <td class="value">-866 kr.</td>
                             </tr>
                             <tr>
                                 <td class="description">Din specialpris</td>
@@ -129,13 +144,28 @@ function openStepTwo() {
                     </div>
                     <button type="button" class="show_more">Se besparelse</button>
                     <div class="content">
-                        <tr>
-                            <td>8 nr. af iFORM (normalpris pr. stk. 77,50 kr.) 620 kr. </td>
-                            <td>ActiveFit fiberjakke 600 kr.</td>
-                            <td>Værdi 1220 kr. </td>
-                            <td>Rabat -921 kr. </td>
-                            <td>Din specialpris 299 kr. </td>
-                        </tr>
+                    <table>
+                    <tr>
+                        <td class="description">8 nr. af iFORM (normalpris pr. stk. 77,50 kr.)</td>
+                        <td class="value">620 kr.</td>
+                    </tr>
+                    <tr>
+                        <td class="description">ActiveFit fiberjakke</td>
+                        <td class="value">600 kr.</td>
+                    </tr>
+                    <tr>
+                        <td class="description">Værdi</td>
+                        <td class="value">1220 kr.</td>
+                    </tr>
+                    <tr>
+                        <td class="description">Rabat</td>
+                        <td class="value">-921 kr.</td>
+                    </tr>
+                    <tr>
+                        <td class="description">Din specialpris</td>
+                        <td class="value">299 kr.</td>
+                    </tr>
+                </table>
                     </div>
                 </div>             
             </div>
