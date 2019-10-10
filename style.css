@@ -98,3 +98,35 @@ span img {
   height: 50px;
   margin: 5vw;
 }
+
+li {
+  list-style-image: url(assets/checkmark_pink.svg);
+  width: 90%;
+  font-family: font;
+  font-size: 18px;
+  margin: 0 auto 20px;
+  padding: 10px;
+}
+
+.ratings {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+
+p {
+  font-family: font;
+}
+
+a {
+  color: var(--purple);
+  font-family: font;
+  margin: 20px;
+}
