@@ -303,9 +303,6 @@ table {
 
 }
 
-
-
-
 .steps {
   background-color: #dbdbdb; 
   display: flex; 
@@ -369,3 +366,36 @@ width: 100%;
   
 } 
 
+.value h2 {
+  color: #ff025c; 
+}
+
+.go_back_checkout {
+  color: #afb1b2; 
+  text-decoration: underline; 
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  width: 90%;
+  height: 10px;
+  margin: 5vw;
+  
+}
+
+.subscription_info img {
+  width: 90%; 
+
+}
+
+.subscription_info p {
+  font-family: font; 
+  padding: 20px; 
+  color: #dbdbdb; 
+}
+
+.subscription_info h3 {
+font-family: font; 
+color: #afb1b2; 
+margin-left: 10px; 
+}
