@@ -231,6 +231,7 @@ span img {
   outline: none;
   font-size: 15px;
   background: none;
+  z-index: 11;
 }
 
 /* Style the collapsible content. Note: hidden by default */
@@ -253,7 +254,7 @@ span img {
   text-align: right;
 }
 
-.magazine.show_more_info .content {
+.show_more_info {
   display: block;
 }
 

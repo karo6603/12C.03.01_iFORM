@@ -17,7 +17,6 @@ function togglePopup() {
 
 function selectSize(size) {
   selected_size = size.textContent;
-  size.classList.toggle("size_is_selected");
   console.log(selected_size);
 }
 
@@ -47,11 +46,21 @@ function openStepOne() {
 
   let sizeselection = popup.querySelectorAll(".size");
 
-  sizeselection.forEach(function(size) {
-    size.addEventListener("click", () => {
-      selectSize(size);
+  for (let i = 0; i < sizeselection.length; i++) {
+    sizeselection[i].addEventListener("click", function() {
+      let currently_active = document.querySelectorAll(".size_is_selected");
+
+      if (currently_active.length > 0) {
+        currently_active[0].className = currently_active[0].className.replace(
+          " size_is_selected",
+          ""
+        );
+      }
+      this.className += " size_is_selected";
+
+      selectSize(this);
     });
-  });
+  }
 }
 
 function openStepTwo() {
@@ -74,7 +83,7 @@ function openStepTwo() {
                         <h1>4 nr. for 149 kr.</h1>
                         <h2>spar 761 kr. </h2>
                     </div>
-                    <button type="button" class="show_more"></button>
+                    <button type="button" class="show_more">Se besparelse</button>
                     <div class="content">
                     <table>
                             <tr>
@@ -100,7 +109,7 @@ function openStepTwo() {
                         </table>
                     </div>
                 </div>
-                <div class="magazine" value="6">
+                <div class="magazine popular" value="6">
                     <div>
                     <h3>Mest populære</h3>
                         <h1>6 nr. for 199 kr.</h1>
@@ -132,12 +141,14 @@ function openStepTwo() {
                         </table>
                     </div>
                 </div>
+
                 <div class="magazine" value="8">
                     <div>
                     <h3></h3>
                         <h1>8 nr. for 299 kr.</h1>
                         <h2>spar 921 kr.<h2>
                     </div>
+                    
                     <button type="button" class="show_more">Se besparelse</button>
                     <div class="content">
                     <table>
@@ -163,6 +174,7 @@ function openStepTwo() {
                     </tr>
                 </table>
                     </div>
+                    
                 </div>             
             </div>
             <button class="popup_go_further">Gå til kurv</button
@@ -173,28 +185,37 @@ function openStepTwo() {
 
   let magazines = popup.querySelectorAll(".magazine");
 
-  magazines.forEach(magazine => {
-    magazine.addEventListener("click", () => {
-      //   magazines.classList.remove("chosen");
+  for (let i = 0; i < magazines.length; i++) {
+    magazines[i].addEventListener("click", function() {
+      let currently_active = document.querySelectorAll(".chosen");
 
-      let open = magazine.classList.contains("chosen");
-
-      if (open) {
-        magazine.classList.remove("chosen");
-      } else {
-        magazine.classList.add("chosen");
-
-        magazine_number = magazine.getAttribute("value");
-
-        console.log(magazine_number);
+      if (currently_active.length > 0) {
+        currently_active[0].className = currently_active[0].className.replace(
+          " chosen",
+          ""
+        );
+        if (currently_active[0].classList.contains("popular"))
+          currently_active[0].querySelector("h3").textContent = "Mest populære";
+        else currently_active[0].querySelector("h3").textContent = "";
       }
+      this.className += " chosen";
 
-      magazine.classList.toggle("show_more_info");
+      this.querySelector("h3").textContent = "Dit valg";
 
-      magazine.querySelector(".show_more").textContent = `${
-        open ? "Se besparelse" : "Luk besparelse"
-      }`;
-      magazine.querySelector("h3").textContent = `${open ? "" : "Dit valg"}`;
+      magazine_number = this.getAttribute("value");
+      console.log(magazine_number);
     });
-  });
+  }
+
+  let savings = document.querySelectorAll(".show_more");
+
+  for (let i = 0; i < savings.length; i++) {
+    savings[i].addEventListener("click", function() {
+      let panel = this.nextElementSibling;
+      panel.classList.toggle("show_more_info");
+
+      let open = panel.classList.contains("show_more_info");
+      this.textContent = `${open ? "Luk besparelse" : "Se besparelse"}`;
+    });
+  }
 }
