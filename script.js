@@ -3,8 +3,6 @@
 let body = document.querySelector("body");
 let popup = document.querySelector("#popup");
 let ordernow = document.querySelector(".ordernow");
-let selected_size = "";
-let magazine_number = "";
 
 ordernow.addEventListener("click", () => {
   togglePopup();
@@ -16,8 +14,7 @@ function togglePopup() {
 }
 
 function selectSize(size) {
-  selected_size = size.textContent;
-  console.log(selected_size);
+  window.sessionStorage.size = size.textContent;
 }
 
 function openStepOne() {
@@ -177,7 +174,7 @@ function openStepTwo() {
                     
                 </div>             
             </div>
-            <button class="popup_go_further">Gå til kurv</button
+            <a href="basket.html"><button class="popup_go_further">Gå til kurv</button></a>
         </div>`;
   popup.innerHTML = template;
   popup.querySelector(".popup_close").addEventListener("click", togglePopup);
@@ -202,8 +199,7 @@ function openStepTwo() {
 
       this.querySelector("h3").textContent = "Dit valg";
 
-      magazine_number = this.getAttribute("value");
-      console.log(magazine_number);
+      window.sessionStorage.amount = this.getAttribute("value");
     });
   }
 

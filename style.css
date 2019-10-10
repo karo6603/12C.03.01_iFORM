@@ -149,48 +149,6 @@ p {
 a {
   color: var(--purple);
   font-family: font;
-  margin: 20px;
-}
-
-/* MEDIAQUERIES */
-
-@media only screen and (min-width: 900px) {
-  .bottom {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .right {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .ratings {
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .stars {
-    margin: 0;
-  }
-
-  .stars p {
-    margin: 20px;
-  }
-
-  button.ordernow {
-    margin: 20px auto;
-    width: 60%;
-  }
-
-  .title h1 {
-    font-size: 30px;
-  }
-  .title h2 {
-    font-size: 30px;
-  }
 }
 
 /*POPUP*/
@@ -318,7 +276,7 @@ a {
 .content {
   display: none;
   overflow: hidden;
-  border: 2px solid var(--purple);
+  margin: 20px;
 }
 
 .content table {
@@ -618,4 +576,71 @@ table {
 .checkbox_checker a {
   margin: 0 auto 20px;
   width: 70%;
+}
+
+/* MEDIAQUERIES */
+
+@media only screen and (min-width: 700px) {
+  #popup {
+    width: 50%;
+    right: 0;
+    top: 0;
+    transform: translate(0, 0);
+  }
+  #popup button.popup_go_further {
+    margin: 10px;
+  }
+
+  #popup h1 {
+    font-size: 25px;
+    margin-top: 25px;
+  }
+
+  table {
+    font-size: 13px;
+  }
+
+  .yourorder {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .ratings {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .stars {
+    margin: 0;
+  }
+
+  .stars p {
+    margin: 20px;
+  }
+
+  button.ordernow {
+    margin: 20px auto;
+    width: 60%;
+  }
+
+  .title h1 {
+    font-size: 30px;
+  }
+  .title h2 {
+    font-size: 30px;
+  }
 }

@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>iFORM</title>
     <link rel="stylesheet" href="style.css" />
+    <meta name="robots" content="noindex" />
+    <script src="https://kea-alt-del.dk/iform/login.js"></script>
   </head>
   <body>
     <header>
@@ -74,3 +76,16 @@
          <img src="assets/sikker_betaling.png" alt="secure_payment">
     </div>
       </main>
+      <script>
+      document.addEventListener("DOMContentLoaded", basket);
+function basket() {
+  document.querySelector(
+    ".yourorder p"
+  ).textContent = `Tekst fra INNERhtml:
+  ${window.sessionStorage.amount} nr. af iFORM 
+                    + ActiveFit fiberjakke
+                    størrelse: ${window.sessionStorage.size}`;
+}</script>
+      </body>
+
+</html>
