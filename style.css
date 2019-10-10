@@ -106,6 +106,7 @@ span img {
   width: 90%;
   height: 50px;
   margin: 5vw;
+  cursor: pointer;
 }
 
 /*POPUP*/
@@ -120,16 +121,17 @@ span img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: font; 
+  font-family: font;
   overflow: auto;
 }
 
 /*POPUP step 1*/
-
 #popup .popup_header {
+  width: 100%;
   background-color: #dbdbdb;
   margin: 0;
   padding: 20px;
+  height: 80px;
 }
 
 #popup .popup_pick_size {
@@ -143,8 +145,8 @@ span img {
 }
 
 #popup .popup_sizes .size {
-  display: flex; 
-  flex-basis: calc(50% - 20px);  
+  display: flex;
+  flex-basis: calc(50% - 20px);
   justify-content: center;
   flex-direction: column;
   height: 60px;
@@ -157,7 +159,8 @@ span img {
 }
 
 #popup img {
-  padding: 65px; 
+  /* padding: 65px; */
+  margin: 20px auto;
 }
 
 #popup .popup_sizes .size.selected {
@@ -170,23 +173,22 @@ span img {
 }
 
 #popup .popup_wrapper {
-  text-align: center; 
+  text-align: center;
 }
 
 #popup button.popup_close,
 #popup button.popup_go_back {
   position: absolute;
-  top: 30px;
-  font-size: 60px;
+  top: 35px;
   cursor: pointer;
   border: none;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  overflow: visible;
-  background: transparent;
-  height: 30px; 
-  width: 30px; 
+  background: none;
+  height: 30px;
+  width: 30px;
+}
+
+#popup button.popup_close img {
+  padding: 0 20px;
 }
 
 #popup button.popup_close {
@@ -197,10 +199,9 @@ span img {
   left: 45px;
 }
 
-
 #popup button.popup_close svg,
 #popup button.popup_go_back svg {
-  display: block; 
+  display: block;
 }
 
 #popup button.popup_go_further {
@@ -216,20 +217,6 @@ span img {
 
 /*POPUP step 2*/
 
-#popupsteptwo {
-  width: 100vw;
-  min-height: 100vh;
-  height: 100%;
-  position: fixed;
-  background-color: white;
-  display: none;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: font; 
-  overflow: auto;
-
-}
 #popupsteptwo.is-shown {
   display: block;
 }
@@ -238,11 +225,12 @@ span img {
 
 .magazine .show_more {
   color: #73008f;
-  text-decoration: underline; 
+  text-decoration: underline;
   cursor: pointer;
   border: none;
   outline: none;
   font-size: 15px;
+  background: none;
 }
 
 /* Style the collapsible content. Note: hidden by default */
@@ -250,7 +238,7 @@ span img {
 .content {
   display: none;
   overflow: hidden;
-  border: 2px solid #73008f; 
+  border: 2px solid #73008f;
 }
 
 .content table {
@@ -269,31 +257,39 @@ span img {
   display: block;
 }
 
-.magazine.show_more_info .show_more {
-  display: none;
-}
-
 .popup_magazines {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin: 15px; 
+  margin: 15px;
 }
 
 .magazine {
-  border: 2px solid #dbdbdb; 
-  padding: 10px; 
-  margin-bottom: 20px;  
+  border: 2px solid #dbdbdb;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
-.magazine h2 {  
-  color: #ff025c; 
-  
+.magazine h2 {
+  color: var(--pink);
+}
+
+.magazine h1 {
+  margin: 50px 0 20px;
+}
+
+.magazine h3 {
+  font-size: 25px;
+  margin: -25px auto 0px;
+  background-color: white;
+  width: 40%;
+  color: var(--purple);
 }
 
 table {
-  height: 100%; 
+  height: 100%;
 }
 
-
-
+.chosen {
+  border: 2px solid var(--purple);
+}
