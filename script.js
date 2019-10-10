@@ -1,28 +1,28 @@
-"use strict" 
+"use strict";
 
-let body = document.querySelector("body"); 
+let body = document.querySelector("body");
 let popup = document.querySelector("#popup");
 let ordernow = document.querySelector(".ordernow");
 let selected_size = "";
 
-ordernow.addEventListener('click',() => { 
-    togglePopup();
-    openStepOne();
+ordernow.addEventListener("click", () => {
+  togglePopup();
+  openStepOne();
 });
 
 function togglePopup() {
-    body.classList.toggle("popup_is_shown"); 
-    openStepOne();
+  body.classList.toggle("popup_is_shown");
+  openStepOne();
 }
 
 function selectSize(size) {
-    let sizes = popup.querySelectorAll(".size")
-    sizes.className = "size"
-    size.classList.toggle("size_is_selected"); 
+  let sizes = popup.querySelectorAll(".size");
+  sizes.className = "size";
+  size.classList.toggle("size_is_selected");
 }
 
 function openStepOne() {
-    let template = `
+  let template = `
         <div class="popup_wrapper">
             <h1 class="popup_header">ActiveFit fiberjakke</h1>
             <button class="popup_close">
@@ -41,24 +41,24 @@ function openStepOne() {
                 <div class="size"><div>XL</div></div>               
             </div>
             <button class="popup_go_further">Videre</button>
-        </div>`
-    popup.innerHTML = template;
-    popup.querySelector(".popup_close").addEventListener("click", togglePopup);
-    popup.querySelector(".popup_go_further").addEventListener("click", openStepTwo);
-    
-    let sizeselection = popup.querySelectorAll(".size");
+        </div>`;
+  popup.innerHTML = template;
+  popup.querySelector(".popup_close").addEventListener("click", togglePopup);
+  popup
+    .querySelector(".popup_go_further")
+    .addEventListener("click", openStepTwo);
 
-    sizeselection.forEach(function(size) {
-        size.addEventListener("click", function(event) {
-            selectSize(size);
-        });
+  let sizeselection = popup.querySelectorAll(".size");
+
+  sizeselection.forEach(function(size) {
+    size.addEventListener("click", function(event) {
+      selectSize(size);
     });
-
-
+  });
 }
 
 function openStepTwo() {
-    let template = `
+  let template = `
         <div class="popup_wrapper">
             <h1 class="popup_header">Vælg antal blade</h1>
             <button class="popup_go_back">
@@ -171,16 +171,15 @@ function openStepTwo() {
             </div>
             <button class="popup_go_further">Gå til kurv</button
         </div>`;
-    popup.innerHTML = template;
-    popup.querySelector(".popup_close").addEventListener("click", togglePopup);
-    popup.querySelector(".popup_go_back").addEventListener("click", openStepOne);
-    
-    let magazines = popup.querySelectorAll(".magazine");
+  popup.innerHTML = template;
+  popup.querySelector(".popup_close").addEventListener("click", togglePopup);
+  popup.querySelector(".popup_go_back").addEventListener("click", openStepOne);
 
-    magazines.forEach(function(magazine) {
-        magazine.addEventListener("click", function(event) {
-            magazine.classList.toggle("show_more_info"); 
-        });
+  let magazines = popup.querySelectorAll(".magazine");
+
+  magazines.forEach(function(magazine) {
+    magazine.addEventListener("click", function(event) {
+      magazine.classList.toggle("show_more_info");
     });
+  });
 }
-

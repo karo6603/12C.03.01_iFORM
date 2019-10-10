@@ -10,6 +10,14 @@
   src: url(fonts/GT-Walsheim-Regular.woff);
 }
 
+a {
+  cursor: pointer;
+}
+
+p {
+  font-family: font;
+}
+
 /* FIX OVERFLOW */
 body.popup_is_shown {
   overflow: hidden;
@@ -120,7 +128,7 @@ span img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: font; 
+  font-family: font;
   overflow: auto;
 }
 
@@ -143,8 +151,8 @@ span img {
 }
 
 #popup .popup_sizes .size {
-  display: flex; 
-  flex-basis: calc(50% - 20px);  
+  display: flex;
+  flex-basis: calc(50% - 20px);
   justify-content: center;
   flex-direction: column;
   height: 60px;
@@ -157,7 +165,7 @@ span img {
 }
 
 #popup img {
-  padding: 65px; 
+  padding: 65px;
 }
 
 #popup .popup_sizes .size.selected {
@@ -170,7 +178,7 @@ span img {
 }
 
 #popup .popup_wrapper {
-  text-align: center; 
+  text-align: center;
 }
 
 #popup button.popup_close,
@@ -185,8 +193,8 @@ span img {
   width: auto;
   overflow: visible;
   background: transparent;
-  height: 30px; 
-  width: 30px; 
+  height: 30px;
+  width: 30px;
 }
 
 #popup button.popup_close {
@@ -197,10 +205,9 @@ span img {
   left: 45px;
 }
 
-
 #popup button.popup_close svg,
 #popup button.popup_go_back svg {
-  display: block; 
+  display: block;
 }
 
 #popup button.popup_go_further {
@@ -226,9 +233,8 @@ span img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: font; 
+  font-family: font;
   overflow: auto;
-
 }
 #popupsteptwo.is-shown {
   display: block;
@@ -237,8 +243,8 @@ span img {
 /*SE BESPARELSE*/
 
 .magazine .show_more {
-  color: #73008f;
-  text-decoration: underline; 
+  color: var(--purple);
+  text-decoration: underline;
   cursor: pointer;
   border: none;
   outline: none;
@@ -250,7 +256,7 @@ span img {
 .content {
   display: none;
   overflow: hidden;
-  border: 2px solid #73008f; 
+  border: 2px solid var(--purple);
 }
 
 .content table {
@@ -277,62 +283,60 @@ span img {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin: 15px; 
+  margin: 15px;
 }
 
 .magazine {
-  border: 2px solid #dbdbdb; 
-  padding: 10px; 
-  margin-bottom: 20px;  
+  border: 2px solid var(--grey);
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
-.magazine h2 {  
-  color: #ff025c; 
-  
+.magazine h2 {
+  color: var(--pink);
 }
 
 table {
-  height: 100%; 
+  height: 100%;
 }
 
 /*BASKET*/
 
 .first_step {
-  font-family: font; 
- 
-
+  font-family: font;
 }
 
 .steps {
-  background-color: #dbdbdb; 
-  display: flex; 
+  background-color: var(--grey);
+  display: flex;
   flex-direction: row;
-  height: 100%; 
+  height: 100%;
   font-family: font;
   width: 100vw;
-  justify-content: space-around;  
-  margin: -10px; 
-  padding: 15px;  
+  justify-content: space-around;
+  margin: -10px;
+  padding: 15px;
+  overflow-x: hidden;
 }
 
 .basket_step1 {
-  color: #ff025c; 
+  color: var(--pink);
 }
 
 #header_yourorder {
-  text-align: center; 
-  font-family: font; 
+  text-align: center;
+  font-family: font;
 }
 
 .yourorder {
-  display: flex; 
-  justify-content: center; 
-  border: 2px solid #73008f; 
-  padding: 20px; 
+  display: flex;
+  justify-content: center;
+  border: 2px solid var(--purple);
+  padding: 20px;
 }
 
 .yourorder img {
-  width: 50%; 
+  width: 50%;
 }
 
 .go_to_nextstep {
@@ -344,37 +348,36 @@ table {
   width: 90%;
   height: 50px;
   margin: 5vw;
-} 
+}
 
 .basket_value {
-font-family: font;   
- 
-
+  font-family: font;
 }
 
 .basket_value table {
   margin: 0 auto;
-  width: 90%; 
- 
+  width: 90%;
 }
 
-.basket_value table td.description  {
+.basket_value table td.description {
   text-align: left;
-  
 }
 
 .basket_value table td.value {
   text-align: right;
-  
-} 
+}
+
+.basket_value td {
+  border-bottom: 1px solid #ddd;
+}
 
 .value h2 {
-  color: #ff025c; 
+  color: var(--pink);
 }
 
 .go_back_checkout {
-  color: #afb1b2; 
-  text-decoration: underline; 
+  color: var(--darkgrey);
+  text-decoration: underline;
   cursor: pointer;
   border: none;
   outline: none;
@@ -382,143 +385,113 @@ font-family: font;
   width: 90%;
   height: 10px;
   margin: 5vw;
-  
+  background: none;
 }
 
 .subscription_info img {
-  width: 90%; 
-
+  width: 90%;
 }
 
 .subscription_info p {
-  font-family: font; 
-  padding: 20px; 
-  color: #dbdbdb; 
+  font-family: font;
+  padding: 20px;
+  color: var(--darkgrey);
 }
 
 .subscription_info h3 {
-font-family: font; 
-color: #afb1b2; 
-margin-left: 10px; 
+  font-family: font;
+  color: var(--darkgrey);
+  margin-left: 10px;
 }
 
 /* DELIVERY */
 
 .shipping_step2 {
-  color: #ff025c; 
+  color: var(--pink);
 }
 
-/* form {
-  font-family: font; 
-  width: 90%; 
-  display: flex;
-  flex-direction: column; 
-  margin: 10px; 
-  
-   
+.form {
+  overflow-x: hidden;
 }
 
-input {
-  padding: 15px; 
-} */
-
-
-/* FORM https://codepen.io/mdchad/pen/qqmJex  */
-
-body {
-  text-align: center; 
-  font-family: font; 
+.form input {
+  padding: 10px 0;
+  margin: 10px auto;
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  border: 1px solid var(--darkgrey);
+  border-radius: 3px;
 }
 
-.main{
-  position:relative;
-  margin: 100px;
+.form form div {
+  position: relative;
 }
 
-.hello{
-  /* position: absolute; */
-  left: 25%;
-  top: 10px;
-  font-size: 18px;
-  font-weight: 200;
-  color: #afb1b2; 
-  transition: all 0.5s ease;
-  pointer-events: none;
-}
-
-input[type=text]:focus~.hello {
-  display:block;
-  color: #73008f; 
-  top: -20px;
-  font-size: 14px;
-}
-
-input[type=text]:focus~.enter {
-  background-color: #73008f; 
+.form form div label {
   position: absolute;
-  content: ' ';
-  height: 1px;
-  right: 45%;
-  top: 42px;
-  transform: scaleX(5) */
-
+  top: 25px;
+  left: 10px;
+  pointer-events: none;
+  transition: 0.5s;
+  background-color: white;
+  font-family: font;
+  color: var(--darkgrey);
+  z-index: 2;
 }
 
-.enter{
-  transition: all ease 0.5s;
-  width: 10.1%;
-  transform: scaleX(1)
-
+.form input:focus ~ label,
+.form input:valid ~ label {
+  top: -2px;
+  color: var(--purple);
 }
 
-textarea, input { 
-  outline: none;
-  border: 2px solid #cecece;
-  height: 40px;
-  width: 50%; */
-} 
+.horizontal {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
 
-input:focus{
-  content
+.horizontal input {
+  width: 100%;
 }
 
 /* PAY */
 
 .payment_step3 {
-  color: #ff025c; 
+  color: var(--pink);
 }
 
-label  {
-border: 1px solid #afb1b2; 
-padding: 20px;  
-} 
-
+.radio_checker label {
+  border: 1px solid var(--darkgrey);
+  padding: 20px;
+}
 
 .radio_checker {
-  width: 90%; 
-  height: 90%; 
-  margin-top: 30px; 
-  padding: 20px; 
- 
+  width: 90%;
+  height: 90%;
+  margin-top: 30px;
+  padding: 20px;
 }
 
 .radio_checker img {
-width: 20%;  
+  width: 20%;
 }
-/* Customize the label (the container) */
+
 .container {
   display: block;
-  position: relative; 
-  border: 2px sold black; 
+  position: relative;
+  border: 2px sold black;
   cursor: pointer;
   font-size: 22px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-/* Hide the browser's default radio button */
 .container input {
   position: absolute;
   opacity: 0;
@@ -527,40 +500,45 @@ width: 20%;
   width: 0;
 }
 
-/* Create a custom radio button */
 .checkmark {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 47px;
+  left: 20px;
   height: 25px;
   width: 25px;
   background-color: #eee;
   border-radius: 50%;
 }
 
-/* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: #73008f; 
+  background-color: rgb(127, 241, 152);
 }
 
-/* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark:after {
-  content: "";
+  content: "\2713";
   position: absolute;
+  left: 5px;
+  top: -2px;
   display: none;
+  color: white;
 }
 
-/* Show the indicator (dot/circle) when checked */
 .container input:checked ~ .checkmark:after {
   display: block;
 }
 
-/* Style the indicator (dot/circle) */
-.container .checkmark:after {
-  top: 9px;
-  left: 9px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: white;
+.checkbox_checker .container {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+.checkbox_checker p {
+  margin: 45px auto 10px;
+  width: 70%;
+}
+
+.checkbox_checker a {
+  margin: 0 auto 20px;
+  width: 70%;
 }
